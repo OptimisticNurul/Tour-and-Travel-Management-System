@@ -17,12 +17,14 @@ The project structure includes components built using ASP.NET Core APIs for back
 
 - **ASP.NET Core APIs:** Contains the backend logic for handling API requests, data processing, and business logic.
 - **Angular:** Frontend framework used for building the user interface and interacting with the backend APIs.
+- **React:** Frontend framework used for building the user interface and interacting with the backend APIs.
 - **JavaScript/Bootstrap:** Used for frontend development and styling the user interface.
 
 ## Technologies Used
 
 - **ASP.NET Core:** Used for building the backend APIs and implementing server-side logic.
 - **Angular:** Frontend framework used for building dynamic and interactive user interfaces.
+- **React:** Frontend framework used for building the user interface and interacting with the backend APIs.
 - **JavaScript/TypeScript:** Used for client-side scripting and enhancing the user experience.
 - **Bootstrap:** Frontend framework used for responsive design and styling.
 - **Payment Gateways:** Integration with payment gateways for processing tour payments securely.
