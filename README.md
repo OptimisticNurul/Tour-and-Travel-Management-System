@@ -1,6 +1,6 @@
 # Tour and Travel Management System (IN PROGRESS)
 
-The Tour and Travel Management System is a web application developed using ASP.NET Core APIs, Angular, JavaScript, and Bootstrap. It provides a comprehensive solution for managing tour packages, bookings, and calculations related to tours.
+The Tour and Travel Management System is a web application developed using ASP.NET Core APIs, Angular, React, JavaScript, and Bootstrap. It provides a comprehensive solution for managing tour packages, bookings, and calculations related to tours.
 
 ## Features
 
