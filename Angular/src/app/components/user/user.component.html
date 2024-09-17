@@ -1,0 +1,32 @@
+<div class="d-flex justify-content-between alert alert-secondary container">
+  <div>
+    <h2>User Information</h2>
+  </div>
+  <div>
+    <a [routerLink]="['/userCreate']" mat-mini-fab color="primary"><mat-icon>add</mat-icon></a>
+  </div>
+</div>
+
+<table class="table table-bordered table-striped table-hover container">
+  <thead class="table-dark">
+    <tr>
+      <th>User Name</th>
+      <th>Email</th>
+      <th>Role</th>
+      <th>Pictue</th>
+      <th>Action</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let p of userVM">
+      <td>{{p.userName}}</td>
+      <td>{{p.email}}</td>
+      <td>{{p.role}}</td>
+      <td><img src="http://localhost:5002/Images/{{p.profileImage}}" width="50" /></td>
+      <td>
+        <button mat-icon-button ><mat-icon>edit</mat-icon></button>
+        <button mat-icon-button color="warn" ><mat-icon>delete</mat-icon></button>
+      </td>
+    </tr>
+  </tbody>
+</table>

@@ -1,0 +1,29 @@
+<form class="form-container" [formGroup]="userForm" (ngSubmit)="insert()">
+    <div class="alert alert-danger">
+        <h1 class="text-center">Create New User</h1>
+    </div>
+    <mat-form-field class="f-w">
+        <mat-label>User Name</mat-label>
+        <input matInput formControlName="userName" />
+    </mat-form-field>
+    <mat-form-field class="f-w">
+        <mat-label>Password</mat-label>
+        <input matInput formControlName="password" type="password" />
+    </mat-form-field>
+    <mat-form-field class="f-w">
+        <mat-label>Email</mat-label>
+        <input matInput formControlName="email" />
+    </mat-form-field>
+    <mat-form-field class="f-w">
+        <mat-label>Role</mat-label>
+        <input matInput formControlName="role" />
+    </mat-form-field>
+    <div class="f-w">
+        <label>Profile Image</label>
+        <input type="file" formControlName="imageFile" (change)="onFileSelected($event)" />
+    </div>
+    <div class="d-flex justify-content-between">
+        <button mat-raised-button type="submit" color="accent"><mat-icon>save_alt</mat-icon>Save</button>
+        <button mat-stroked-button [routerLink]="['/user']" color="warn">Return to User</button>
+    </div>
+</form>

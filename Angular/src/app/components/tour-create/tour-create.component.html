@@ -1,0 +1,58 @@
+<form class="form-container" [formGroup]="tourForm" (ngSubmit)="insert()">
+    <div>
+        <h1 style="color:darkorange;">Create New Tour</h1>
+    </div>
+    <mat-form-field class="f-w">
+        <mat-label>Tour Name</mat-label>
+        <input matInput formControlName="tourName" />
+    </mat-form-field>
+    <mat-form-field class="f-w">
+        <mat-label>Destination</mat-label>
+        <input matInput formControlName="destination" />
+    </mat-form-field>
+    <mat-form-field class="f-w">
+        <mat-label>Duration</mat-label>
+        <input matInput formControlName="duration" type="number" />
+    </mat-form-field>
+    <mat-form-field class="f-w">
+        <mat-label>Departure Time</mat-label>
+        <input matInput [matDatepicker]="picker" formControlName="departureTime" />
+        <mat-hint>MM/DD/YYYY</mat-hint>
+        <mat-datepicker-toggle matIconPrefix [for]="picker"></mat-datepicker-toggle>
+        <mat-datepicker #picker></mat-datepicker>
+    </mat-form-field>
+    <mat-form-field class="f-w">
+        <mat-label>Arrival Time</mat-label>
+        <input matInput [matDatepicker]="picker1" formControlName="arrivalTime" />
+        <mat-hint>MM/DD/YYYY</mat-hint>
+        <mat-datepicker-toggle matIconPrefix [for]="picker1"></mat-datepicker-toggle>
+        <mat-datepicker #picker1></mat-datepicker>
+    </mat-form-field>
+    <mat-form-field class="f-w">
+        <mat-label>Description</mat-label>
+        <input matInput formControlName="description" />
+    </mat-form-field>
+    <mat-form-field class="f-w">
+        <mat-label>TourPackageId</mat-label>
+        <input matInput formControlName="tourPackageId" type="number" />
+    </mat-form-field>
+    <mat-form-field class="f-w">
+        <mat-label>Date</mat-label>
+        <input matInput [matDatepicker]="picker2" formControlName="date" />
+        <mat-hint>MM/DD/YYYY</mat-hint>
+        <mat-datepicker-toggle matIconPrefix [for]="picker2"></mat-datepicker-toggle>
+        <mat-datepicker #picker2></mat-datepicker>
+    </mat-form-field>
+    <mat-form-field class="f-w">
+        <mat-label>AvailableSlots</mat-label>
+        <input matInput formControlName="availableSlots" />
+    </mat-form-field>
+    <div class="f-w">
+        <label>Tour Image</label>
+        <input type="file" formControlName="imageFile" (change)="onFileSelected($event)" />
+    </div>
+    <div class="d-flex justify-content-between">
+        <button mat-raised-button type="submit" color="accent"><mat-icon>save_alt</mat-icon>Save</button>
+        <button mat-stroked-button [routerLink]="['/tour']" color="warn">Return to Tour</button>
+    </div>
+</form>

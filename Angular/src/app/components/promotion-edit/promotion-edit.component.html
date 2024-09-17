@@ -1,0 +1,40 @@
+<form class="form-container" [formGroup]="promotionForm" (submit)="update()">
+    <div class="alert alert-danger">
+        <h1 class="text-center">Edit Promotion</h1>
+    </div>
+    <mat-form-field class="f-w">
+        <mat-label>Promo Code</mat-label>
+        <input matInput formControlName="code" />
+    </mat-form-field>
+    <mat-form-field class="f-w">
+        <mat-label>Description</mat-label>
+        <input matInput formControlName="description" />
+    </mat-form-field>
+    <mat-form-field class="f-w">
+        <mat-label>Discount</mat-label>
+        <input matInput formControlName="discount" />
+    </mat-form-field>
+    <mat-form-field class="f-w">
+        <mat-label>Start Date</mat-label>
+        <input matInput [matDatepicker]="picker" formControlName="startDate" />
+        <mat-hint>MM/DD/YYYY</mat-hint>
+        <mat-datepicker-toggle matIconPrefix [for]="picker"></mat-datepicker-toggle>
+        <mat-datepicker #picker></mat-datepicker>
+    </mat-form-field>
+    <mat-form-field class="f-w">
+        <mat-label>End Date</mat-label>
+        <input matInput [matDatepicker]="picker1" formControlName="endDate" />
+        <mat-hint>MM/DD/YYYY</mat-hint>
+        <mat-datepicker-toggle matIconPrefix [for]="picker1"></mat-datepicker-toggle>
+        <mat-datepicker #picker1></mat-datepicker>
+    </mat-form-field>
+    <mat-form-field class="f-w">
+        <mat-label>Remaining Uses</mat-label>
+        <input matInput formControlName="remainingUses" />
+    </mat-form-field>
+    <div class="d-flex justify-content-between">
+        <button [disabled]="promotionForm.invalid" mat-raised-button type="submit" color="accent"><mat-icon>save_alt</mat-icon>Update</button>
+        <button mat-stroked-button [routerLink]="['/promotion']" color="warn">Return to Promotion</button>
+    </div>
+</form>
+

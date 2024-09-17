@@ -1,0 +1,14 @@
+.card-container
+{
+    box-sizing:border-box;
+    width:97%;
+    margin:25px auto 10px auto;
+}
+.table-container {
+  box-sizing: border-box;
+  width: 97%;
+  margin: 0 auto;
+}
+.filter{
+    flex:1 1 auto;
+}

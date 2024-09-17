@@ -1,0 +1,50 @@
+<mat-card class="card-container">
+    <mat-card-header>
+        <mat-card-title>Promotions</mat-card-title>
+        <mat-card-subtitle>Promotion Information</mat-card-subtitle>
+        <span class="filter"></span>
+        <a [routerLink]="['/promotionCreate']" mat-mini-fab color="primary"><mat-icon>add</mat-icon></a>
+    </mat-card-header>
+    <mat-card-content>
+        <mat-divider></mat-divider>
+        <div class="table-container mat-elevation-z8">
+            <mat-table [dataSource]="dataSource" matSort>
+                <ng-container matColumnDef="promoCode">
+                    <mat-header-cell *matHeaderCellDef mat-sort-header>Promo Code</mat-header-cell>
+                    <mat-cell *matCellDef="let element">{{element.code}}</mat-cell>
+                </ng-container>
+                <ng-container matColumnDef="description">
+                    <mat-header-cell *matHeaderCellDef mat-sort-header>Description</mat-header-cell>
+                    <mat-cell *matCellDef="let element">{{element.description}}</mat-cell>
+                </ng-container>
+                <ng-container matColumnDef="discount">
+                    <mat-header-cell *matHeaderCellDef mat-sort-header>Discount</mat-header-cell>
+                    <mat-cell *matCellDef="let element">{{element.discount}}%</mat-cell>
+                </ng-container>
+                <ng-container matColumnDef="startDate">
+                    <mat-header-cell *matHeaderCellDef mat-sort-header>Start Date</mat-header-cell>
+                    <mat-cell *matCellDef="let element">{{element.startDate|date:'MMM dd, yyyy'}}</mat-cell>
+                </ng-container>
+                <ng-container matColumnDef="endDate">
+                    <mat-header-cell *matHeaderCellDef mat-sort-header>End Date</mat-header-cell>
+                    <mat-cell *matCellDef="let element">{{element.endDate|date:'MMM dd, yyyy'}}</mat-cell>
+                </ng-container>
+                <ng-container matColumnDef="remainingUses">
+                    <mat-header-cell *matHeaderCellDef mat-sort-header>RemainingUses</mat-header-cell>
+                    <mat-cell *matCellDef="let element">{{element.remainingUses}}</mat-cell>
+                </ng-container>
+                <ng-container matColumnDef="actions">
+                    <mat-header-cell *matHeaderCellDef>Action</mat-header-cell>
+                    <mat-cell *matCellDef="let element">
+                        <button mat-icon-button [routerLink]="['/promotionEdit',element.promotionId]"><mat-icon>edit</mat-icon></button>
+                        <button mat-icon-button color="warn" (click)="confirmDelete(element)"><mat-icon>delete</mat-icon></button>
+                    </mat-cell>
+                </ng-container>
+                <mat-header-row *matHeaderRowDef="columnList"></mat-header-row>
+                <mat-row *matRowDef="let row; columns:columnList"></mat-row>
+            </mat-table>
+            <mat-paginator [pageSizeOptions]="[5,10,25,100]" [pageSize]="5" showFirstLastButtons></mat-paginator>
+        </div>
+    </mat-card-content>
+    
+</mat-card>

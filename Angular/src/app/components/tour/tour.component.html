@@ -1,0 +1,37 @@
+<div class="container mt-2">
+    <div>
+      <h2 style="color:crimson;">Tour Information</h2>
+    </div>
+    <div>
+      <a [routerLink]="['/tourCreate']" mat-mini-fab color="primary">
+        <mat-icon>add</mat-icon>
+      </a>
+    </div>
+  </div>
+  
+  <div class="container mt-2">
+    <div class="row">
+      <div class="col-md-12">
+        <div *ngFor="let t of tourVM" class="card mb-2 tour-card">
+          <div class="card-body">
+            <div *ngFor="let i of t.tourImage" class="card-images mb-3">
+              <img src="http://localhost:5002/Images/{{i.picture}}" alt="Tour Image">
+            </div>
+            <p><strong>TourName:</strong> {{t.tourName}}</p>
+            <p><strong>Destination:</strong> {{t.destination}}</p>
+            <p><strong>Duration:</strong> {{t.duration}} Days</p>
+            <p><strong>Departure Time:</strong> {{t.departureTime}}</p>
+            <p><strong>Arrival Time:</strong> {{t.arrivalTime}}</p>
+            <p><strong>Description:</strong> {{t.description}}</p>
+            <div *ngFor="let a of t.tourAvailabilities">
+              <p><strong>Available Slots:</strong> {{a.availableSlots}}</p>
+            </div>
+            <div class="card-buttons">
+              <button class="btn btn-outline-success" [routerLink]="['/tourEdit',t.tourId]">Edit</button>
+              <button class="btn btn-outline-danger" (click)="confirmDelete(t)">Delete</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>

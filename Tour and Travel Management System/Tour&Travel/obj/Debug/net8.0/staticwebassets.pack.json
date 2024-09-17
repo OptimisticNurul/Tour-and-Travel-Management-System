@@ -1,0 +1,25 @@
+{
+  "Files": [
+    {
+      "Id": "I:\\My All IsDB Exam and project main file\\Final Project\\Tour and Travel Management System\\Tour&Travel\\wwwroot\\Images\\2360f4df-3894-40a0-964a-135cc4e99a31.JPG",
+      "PackagePath": "staticwebassets\\Images\\2360f4df-3894-40a0-964a-135cc4e99a31.JPG"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.Tour&Travel.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.build.Tour&Travel.props",
+      "PackagePath": "build\\Tour&Travel.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildMultiTargeting.Tour&Travel.props",
+      "PackagePath": "buildMultiTargeting\\Tour&Travel.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildTransitive.Tour&Travel.props",
+      "PackagePath": "buildTransitive\\Tour&Travel.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

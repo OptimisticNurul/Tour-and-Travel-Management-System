@@ -1,0 +1,28 @@
+
+<mat-sidenav-container class="sidenav-container">
+    <mat-sidenav #drawer class="sidenav"  fixedInViewport [opened]="false">
+        <mat-toolbar>Tour App</mat-toolbar>
+        <mat-divider></mat-divider>
+        <mat-nav-list style="margin-top:0;padding-top:0;">
+            <a mat-list-item (click)="drawer.toggle()" [routerLink]="['/home']"><mat-icon style="margin-right:15px;">home</mat-icon> Home</a>
+            <mat-divider></mat-divider>
+            <a mat-list-item (click)="drawer.toggle()" [routerLink]="['/promotion']"><mat-icon style="margin-right:15px;">apps</mat-icon> Promotions</a>
+            <a mat-list-item (click)="drawer.toggle()" [routerLink]="['/tour']"><mat-icon style="margin-right:15px;">tour</mat-icon> Tours</a>
+            <a mat-list-item (click)="drawer.toggle()" [routerLink]="['/user']"><mat-icon style="margin-right:15px;">manga</mat-icon> user</a>
+        </mat-nav-list>
+    </mat-sidenav>
+    <mat-sidenav-content>
+        <mat-toolbar>
+            <button type="button" aria-label="Toggle sidenav" mat-icon-button (click)="drawer.toggle()">
+                <mat-icon>menu</mat-icon>
+            </button>
+            <span class="me-lg-5">Tour & Travel</span>
+            <button mat-button [routerLink]="['/home']">Home</button>
+            <button mat-button [routerLink]="['/tour']">Tours</button>
+            <button mat-button [routerLink]="['/promotion']">Promotions</button>
+        </mat-toolbar>
+        <div class="top-container">
+            <router-outlet></router-outlet>
+        </div>
+    </mat-sidenav-content>
+</mat-sidenav-container>

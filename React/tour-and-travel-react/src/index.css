@@ -1,0 +1,10 @@
+/* src/index.css */
+
+/* Custom styles for the navbar */
+.navbar {
+    margin-bottom: 20px;
+}
+
+.nav-link {
+    margin-right: 15px;
+}
